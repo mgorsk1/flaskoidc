@@ -10,7 +10,7 @@ LOGGER = logging.getLogger(f"flaskoidc.{__name__}")
 
 class OAuth2Token(app.db.Model):
     id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, nullable=False)
+    user_id = Column(String(255), nullable=False)
     name = Column(String(20), nullable=False)
 
     access_token = Column(String(255), nullable=False)
